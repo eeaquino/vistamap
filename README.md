@@ -1,3 +1,23 @@
+# Overview
+
+This project is the final project for Udacity FEND nanodegree  
+It's purpose is to teach the use of APIs and react.  
+
+## How to use
+Navigate to the directory in cmd or powershell and run npm start, if you do not have npm and node installed plese review their docuemntation at [Node](https://nodejs.org/)  
+The app will load automatically in the browser, then you can click onany of the options on top (Food,Parks,Gas) to find places related to those categories. You can then click on the search icon to filter them, or click on any item to view more details.  
+
+All data returned from API is stored in indexedDB for offline use.
+
+## API Used
+Foursquare API  
+Google Maps API using google-maps-react  
+
+## Other dependencies
+mdbootstrap for material ui purposes  
+Fontawesome for icons  
+
+## Notes
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -37,8 +57,3 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).

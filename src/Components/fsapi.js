@@ -29,6 +29,7 @@ export const getPlaces = (query) =>
         })
         .catch(function() {
             return false;
+            //toast with message handeled in app.js
         });
 export const getPhotos = (id)=>
     fetch(`${url}/${id}/photos?client_id=${ClientID}&client_secret=${Secret}&v=${version}&limit=2`)
@@ -46,6 +47,7 @@ export const getPhotos = (id)=>
             });
         }).catch(function() {
             return false;
+            //Not essential no message shown. Basic info still dissssssplays if this fails. 
         })
 export const getDetails = (id)=>
     fetch(`${url}/${id}?client_id=${ClientID}&client_secret=${Secret}&v=${version}&limit=2`)
@@ -60,4 +62,5 @@ export const getDetails = (id)=>
         });
     }).catch(function() {
         return false;
+        //Not essential no message shown. Basic info still dissssssplays if this fails. 
     })

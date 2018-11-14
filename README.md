@@ -14,7 +14,7 @@ Foursquare API
 Google Maps API using google-maps-react  
 
 ## Other dependencies
-[mdbootstrap](https://mdbootstrap.com/docs/react/getting-started/download/) for material ui purposes  .Install using  npm install mdbreact
+[mdbootstrap](https://mdbootstrap.com/docs/react/getting-started/download/) for material ui purposes  .Install using  npm install mdbreact  
 [LZ-String](https://github.com/pieroxy/lz-string) for data compression. Install using npm install  lz-string  
 
 ## Notes

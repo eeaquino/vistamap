@@ -1,0 +1,35 @@
+.modal .modal-full-height {
+    position: absolute;
+    display: flex;
+    margin: 0;
+    width: 400px;
+    min-height: 100%;
+    height: auto;
+    min-height: 100%;
+    top: 0;
+    right: 0;
+}
+
+.md-form .prefix {
+    left: 0;
+}
+.fixedList {
+    height: calc(100vh - 220px);
+    overflow: auto;
+}
+.rightpanel {
+    height: calc(100vh - 64px);
+    width: 0;
+    transition: all 0.3 ease;
+    overflow: hidden;
+    margin-top: 64px;
+    
+}
+    .rightpanel.active {
+        width: 400px;
+        padding: 0 10px 10px 10px;
+    }
+.searchinput {
+    position: relative;
+    top: 15px;
+}

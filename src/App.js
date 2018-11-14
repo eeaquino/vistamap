@@ -32,6 +32,15 @@ class App extends Component {
             let type = this.props.match.params.type ? this.props.match.params.type : 'Food';
             this.getPlacesFromType(type);
         })
+        setTimeout(() =>
+        {
+            let main = document.getElementsByTagName("MAIN")[0];
+            console.log(main)
+            if (main.innerHTML.toLowerCase().includes("loading")) {
+                toast.error("There was a problem loading the map,wait a few seconds if it does not load please check your internet connection")
+            }
+        },1000)    
+        
         
     }
     onSearchEntered = (e) =>
@@ -172,7 +181,7 @@ class App extends Component {
           <ToastContainer
           hideProgressBar={false}
           newestOnTop={true}
-          autoClose={5000}
+          autoClose={15000}
           />
               
             <Badge className="filter" color="indigo" pill>Filter: {this.state.query} <Button onClick= {this.clearFilter} color="info" className="p-1 pl-2 pr-2 rounded-circle m-0 ml-2"><Fa  icon="close" aria-hidden="false"/></Button></Badge>

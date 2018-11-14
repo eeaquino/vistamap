@@ -7,6 +7,7 @@ class MapContainer extends Component {
     shouldComponentUpdate(nextProp) {
         return !equal(nextProp,this.props);
     }
+    
     render() {
         const style = {
             width: '100%', 
@@ -14,8 +15,9 @@ class MapContainer extends Component {
             position: 'relative'
         }
         return (
-            <div>
+            <div className="map-container" role="application">
                 <Map google={this.props.google} 
+                
                 style={style}
                 className={'map'} 
                 initialCenter={{
@@ -40,4 +42,5 @@ class MapContainer extends Component {
 }
 export default GoogleApiWrapper({
     apiKey: 'AIzaSyCQnPVlSaGpgrIVWpRm-W4q-HasgAdV58w'
+    //Load error handeling in App.js
 })(MapContainer)

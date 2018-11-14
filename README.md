@@ -14,11 +14,13 @@ Foursquare API
 Google Maps API using google-maps-react  
 
 ## Other dependencies
-mdbootstrap for material ui purposes  
-Fontawesome for icons  
+[mdbootstrap](https://mdbootstrap.com/docs/react/getting-started/download/) for material ui purposes  .Install using  npm install mdbreact
+[LZ-String](https://github.com/pieroxy/lz-string) for data compression. Install using npm install  lz-string  
 
 ## Notes
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+### Service Worker will only work on the production build. Please use npm run build and move the files on dist to your server to test out. 
 
 ## Available Scripts
 

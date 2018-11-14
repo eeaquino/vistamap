@@ -36,9 +36,9 @@ class App extends Component {
         {
             let main = document.getElementsByTagName("MAIN")[0];
             if (main.innerHTML.toLowerCase().includes("loading")) {
-                toast.error("There was a problem loading the map,wait a few seconds if it does not load please check your internet connection")
+                toast.error("There might be a problem loading the map,wait a few seconds if it does not load please check your internet connection")
             }
-        },1000)    
+        },2000)    
         
         
     }

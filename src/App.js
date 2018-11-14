@@ -35,7 +35,6 @@ class App extends Component {
         setTimeout(() =>
         {
             let main = document.getElementsByTagName("MAIN")[0];
-            console.log(main)
             if (main.innerHTML.toLowerCase().includes("loading")) {
                 toast.error("There was a problem loading the map,wait a few seconds if it does not load please check your internet connection")
             }
@@ -82,15 +81,15 @@ class App extends Component {
     getPlacesFromType(type) {
         db.getData(type.toLocaleLowerCase(), "places").then(cachedPlaces =>
         {
-            if (cachedPlaces)  this.setState( { places:cachedPlaces });
+            if (cachedPlaces && this.props.match.params.type.toLowerCase() ===type.toLowerCase())  this.setState( { places:cachedPlaces });
             fsAPI.getPlaces((type)).then(places =>
             {
                 if (!places) {
                     toast.error('Could not connect to API. Please try again later.');
-                    return;
+                   return;
                 }
                 db.setData(type.toLocaleLowerCase(), "places", places);
-                this.setState( { places });
+                if (  this.props.match.params.type.toLowerCase() ===type.toLowerCase())this.setState( { places });
             });
         })
     }

@@ -5,7 +5,7 @@ import '../CSS/searchmodal.css';
 class SearchModal extends Component {
   render() {
       const active = this.props.isOpen ? "rightpanel active" : "rightpanel";
-      const tab =  this.props.isOpen ? false: -1;
+      const tab =  this.props.isOpen ? {}: {tabIndex: -1 };
     return (
         //<Modal isOpen={this.props.isOpen} toggle={() => this.props.toggle()} fullHeight position="right">
         //  <ModalBody>
@@ -22,12 +22,12 @@ class SearchModal extends Component {
         //</Modal>
         <div className={active}>
           <form>
-                   <Input  tabindex={tab} className="searchinput" label="Search - type here" icon="search" onChange={this.props.handleInput} value={this.props.query}/>
+                   <Input  {...tab} className="searchinput" label="Search - type here" icon="search" onChange={this.props.handleInput} value={this.props.query}/>
               </form>
              <ListGroup className="fixedList">
-                      {this.props.places.map(item => (<ListGroupItem  tabindex={tab} key={item.id} href="#" hover  onClick = {()=>this.props.itemClicked(item.id)}>{item.name}</ListGroupItem>))}
+                      {this.props.places.map(item => (<ListGroupItem  {...tab} key={item.id} href="#" hover  onClick = {()=>this.props.itemClicked(item.id)}>{item.name}</ListGroupItem>))}
               </ListGroup>
-            <Button  tabindex={tab} color="secondary" onClick={() => this.props.toggle()}>Close</Button>
+            <Button  {...tab} color="secondary" onClick={() => this.props.toggle()}>Close</Button>
         </div>
         
     );
